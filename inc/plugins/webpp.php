@@ -234,7 +234,7 @@ function webpp_donation(): string
 
     $close_link = 'index.php?module=config-plugins&' . TEDEM_WEBPP_ID . '=deactivate-donation&my_post_key=' . $mybb->post_code;
 
-    $close_button = ' &mdash; <b><a href="' . $close_link . '">Close Donation</a></b>';
+    $close_button = ' &mdash; <a href="' . $close_link . '"><b>Close Donation</b></a>';
 
     $message = '<b>Donation:</b> Support for new plugins, themes, etc. via ' . $BMC . ' or ' . $KOFI . $close_button;
 
