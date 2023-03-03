@@ -247,11 +247,7 @@ function webpp_donation_status(): bool
 
     $donation = $cache->read(TEDEM_WEBPP_AUTHOR);
 
-    if (isset($donation[TEDEM_WEBPP_ID]['donation']) && $donation[TEDEM_WEBPP_ID]['donation'] == 1) {
-        return true;
-    }
-
-    return false;
+    return isset($donation[TEDEM_WEBPP_ID]['donation']) && $donation[TEDEM_WEBPP_ID]['donation'] == 1;
 }
 
 function webpp_donation_edit(): void
