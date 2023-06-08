@@ -82,11 +82,7 @@ function webpp_is_installed(): bool
     // has cache
     $plugins = $cache->read(TEDEM_WEBPP_AUTHOR);
 
-    if (isset($plugins[TEDEM_WEBPP_ID])) {
-        return true;
-    }
-
-    return false;
+    return isset($plugins[TEDEM_WEBPP_ID]);
 }
 
 function webpp_uninstall(): void
