@@ -164,7 +164,7 @@ function webpp_update_previous_avatar_extensions(): string
 
     webpp_edit_previous_avatar_extensions();
 
-    $apply_link = 'index.php?module=config-plugins&'.TEDEM_WEBPP_ID.'=edit-previous-avatar-extensions&my_post_key='.$mybb->post_code;
+    $apply_link = 'index.php?module=config-plugins&'.TEDEM_WEBPP_AUTHOR.'-'.TEDEM_WEBPP_ID.'=edit-previous-avatar-extensions&my_post_key='.$mybb->post_code;
 
     $apply_button = ' &mdash; <a href="'.$apply_link.'"><b>Apply</b></a>';
 
@@ -188,7 +188,7 @@ function webpp_edit_previous_avatar_extensions(): void
 {
     global $mybb, $db;
 
-    if ($mybb->get_input('my_post_key') === $mybb->post_code && $mybb->get_input('webpp') === 'edit-previous-avatar-extensions') {
+    if ($mybb->get_input('my_post_key') === $mybb->post_code && $mybb->get_input(TEDEM_WEBPP_AUTHOR.'-'.TEDEM_WEBPP_ID) === 'edit-previous-avatar-extensions') {
         $users = $db->simple_select('users', 'uid, avatar', "avatar != ''");
         if ($db->num_rows($users) >= 1) {
             while ($user = $db->fetch_array($users)) {
