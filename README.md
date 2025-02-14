@@ -28,6 +28,10 @@ Change the extensions of the existing profile photos to `.webp` and upload the n
 
 1. First, perform the "Uninstall" section, then perform the "Install" (with new files) section.
 
+## Contributing Guidelines
+
+Please review our [contributing guidelines](https://github.com/tedem/tedem/blob/main/docs/CONTRIBUTING.md) to learn about our submission process, coding standards, and more.
+
 ## Versioning
 
 I use [SemVer](https://semver.org/) for versioning.
